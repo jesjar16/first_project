@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>First template</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <script src="{% static 'js/script.js' %}"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Hola mundo!</h1>
+
+    <h1>Info del servidor:</h1>
+    <p>Nombre: {{name}}</p>
+    <p>Color: {{favorite_color}}</p>
+    <p>Mascotas</p>
+    <ul>
+        {% for pet in pets %}
+        <li>{{pet}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
